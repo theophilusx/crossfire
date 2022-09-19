@@ -1,0 +1,17 @@
+drop index if exists cf_users_uidx;
+--;;
+drop table if exists crossfire.users;
+--;;
+drop index if exists cf_shipping_addresses_uidx;
+--;;
+drop table if exists crossfire.shipping_addresses;
+--;;
+drop index if exists cf_billing_addresses_uidx;
+--;;
+drop table if exists crossfire.billing_addresses;
+--;;
+drop index if exists cf_retailers_uidx;
+--;;
+drop table if exists crossfire.retailers;
+--;;
+drop table if exists crossfire.user_roles;

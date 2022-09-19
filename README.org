@@ -1,0 +1,129 @@
+* theophilusx.crossfire/core
+
+This is a basic /Clojre/ and /ClojureScript/ based web presence for /Crossfire Lures/. It is put
+together as a real-world example of using /Clojure/ and /ClojureScript/ to implement a fully
+functional web presence.
+
+** Development Plan
+
+*** Stage 1
+
+Develop a basic web presence for wholesale sales to various resellers. This will provide a
+basic site where retail outlets can view the available lure range, place orders, track the
+status of their orders and renew orders.
+
+A significant component of this first stage will be a focus on order management. The
+administrator will be able to view order histories, current orders and use the system to
+assist in assembling and dispatching orders. The system will also provide various
+reporting capabilities to view order histories and breakdown of product order history and
+demand.
+
+*** Stage 2
+
+Provide an enhanced administration interface which enables the administrator to update
+product catalogue (new items, updated photos etc), add additional marketing content
+(videos, blog articles, press releases, etc).
+
+*** Stage 3
+
+Add support for various payment methods. May involve a payment gateway as well as other
+3rd party payment services such as PayPal.
+
+*** Stage 4
+
+General purpose on-line sales presence. Unlike the wholesale presence, this will be for
+public access and represents retail sales (at retail prices).
+
+*** Stage 5
+
+Social media integration and blog service.
+
+*** Stage 6 (Optional)
+
+Mobile app version specifically for wholesale sales.
+
+** Installation
+
+Download from https://github.com/theophilusx.crossfire/core
+
+** Usage
+
+FIXME: explanation
+
+Run the project directly, via `:exec-fn`:
+
+    #+begin_example
+    $ clojure -X:run-x
+    Hello, Clojure!
+    #+end_example
+
+Run the project, overriding the name to be greeted:
+
+    #+begin_example
+    $ clojure -X:run-x :name '"Someone"'
+    Hello, Someone!
+    #+end_example
+
+Run the project directly, via `:main-opts` (`-m theophilusx.crossfire.core`):
+
+    #+begin_example
+    $ clojure -M:run-m
+    Hello, World!
+    #+end_example
+
+Run the project, overriding the name to be greeted:
+
+    #+begin_example
+    $ clojure -M:run-m Via-Main
+    Hello, Via-Main!
+    #+end_example
+
+Run the project's tests (they'll fail until you edit them):
+
+    #+begin_example
+    $ clojure -T:build test
+    #+end_example
+
+Run the project's CI pipeline and build an uberjar (this will fail until you edit the tests to pass):
+
+    #+begin_example
+    $ clojure -T:build ci
+    #+end_example
+
+This will produce an updated `pom.xml` file with synchronized dependencies inside the `META-INF`
+directory inside `target/classes` and the uberjar in `target`. You can update the version (and SCM tag)
+information in generated `pom.xml` by updating `build.clj`.
+
+If you don't want the `pom.xml` file in your project, you can remove it. The `ci` task will
+still generate a minimal `pom.xml` as part of the `uber` task, unless you remove `version`
+from `build.clj`.
+
+Run that uberjar:
+
+    #+begin_example
+    $ java -jar target/core-0.1.0-SNAPSHOT.jar
+    #+end_example
+
+If you remove `version` from `build.clj`, the uberjar will become `target/core-standalone.jar`.
+
+## Options
+
+FIXME: listing of options this app accepts.
+
+** Examples
+
+...
+
+*** Bugs
+
+...
+
+*** Any Other Sections
+*** That You Think
+*** Might be Useful
+
+** License
+
+Copyright © 2022 Tim Cross
+
+Distributed under the Eclipse Public License version 2.0.

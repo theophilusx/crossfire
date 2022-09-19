@@ -1,0 +1,12 @@
+{:source-paths ["src/cljs" "src/test/cljs"]
+ :dependencies [[reagent "1.1.1"]
+                [reagent-utils "0.3.4"]
+                [metosin/reitit "0.5.18"]
+                [pez/clerk "1.0.0"]
+                [venantius/accountant "0.2.5"
+                 :exclusions [org.clojure/tools.reader]]]
+ :dev-http {3001 "public"}
+ :builds {:app {:taget :browser
+                :output-dir "resources/public/js"
+                :asset-path "/js"
+                :modules {:main {:init-fn theophilusx.crossfire.main/init}}}}}

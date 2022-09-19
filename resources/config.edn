@@ -1,0 +1,18 @@
+{:theophilusx.crossfire.handlers/site-handler
+ {}
+ :theophilusx.crossfire.server/jetty
+ {:port 3000
+  :join? false
+  :handler #ig/ref :theophilusx.crossfire.handlers/site-handler}
+ :theophilusx.crossfire.db/postgres
+ {:dbtype "postgres"
+  :subprotocol "postgresql"
+  :subname "postgres"
+  :user "crossfire"
+  :password "devel"
+  :dbname "devel"}
+ :theophilusx.crossfire.migration/devel
+ {:store :database
+  :migration-dir "migrations/"
+  :migration-table-name "crossfire_migrations"
+  :data-source #ig/ref :theophilusx.crossfire.db/postgres}}
